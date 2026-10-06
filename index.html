@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEW CATALOGO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-whatsapp="573117765320">
+<!-- ↑ Tu número de WhatsApp va ahí arriba, con código de país, sin + ni espacios. -->
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#inicio" class="brand" id="brandName">Catalogo</a>
+    <nav class="links" id="navLinks">
+      <a href="#hombre">Hombre</a>
+      <a href="#mujer">Mujer</a>
+      <a href="#nina">Niña</a>
+      <a href="#nino">Niño</a>
+    </nav>
+    <a href="#" class="nav-cta" id="navWaBtn" target="_blank" rel="noopener">
+      Escríbenos
+    </a>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div>
+    <h1>Bolsos con carácter, hechos para durar.</h1>
+    <p>Piezas seleccionadas para hombre, mujer, niña y niño. Cada categoría con su propia identidad, la misma atención al detalle.</p>
+    <div class="hero-chips">
+      <a href="#hombre">Ver hombre</a>
+      <a href="#mujer">Ver mujer</a>
+      <a href="#nina">Ver niña</a>
+      <a href="#nino">Ver niño</a>
+    </div>
+  </div>
+  <div class="hero-side">
+    <strong>¿Cómo comprar?</strong>
+    Elige un bolso, revisa los detalles y escríbenos por WhatsApp para confirmar disponibilidad, medidas y envío.
+  </div>
+</section>
+
+<section class="category" id="hombre" data-theme="hombre">
+  <div class="category-inner">
+    <div class="category-head">
+      <div>
+        <h2>Hombre</h2>
+        <p>Líneas rectas, materiales resistentes, funcionalidad diaria.</p>
+      </div>
+      <span class="category-count" data-count="hombre"></span>
+    </div>
+    <div class="grid" data-grid="hombre"></div>
+  </div>
+</section>
+
+<section class="category" id="mujer" data-theme="mujer">
+  <div class="category-inner">
+    <div class="category-head">
+      <div>
+        <h2>Mujer</h2>
+        <p>Cuero suave, siluetas versátiles, un guiño elegante a lo cotidiano.</p>
+      </div>
+      <span class="category-count" data-count="mujer"></span>
+    </div>
+    <div class="grid" data-grid="mujer"></div>
+  </div>
+</section>
+
+<section class="category" id="nina" data-theme="nina">
+  <div class="category-inner">
+    <div class="category-head">
+      <div>
+        <h2>Niña</h2>
+        <p>Colores suaves y formas amables, pensados para las más pequeñas.</p>
+      </div>
+      <span class="category-count" data-count="nina"></span>
+    </div>
+    <div class="grid" data-grid="nina"></div>
+  </div>
+</section>
+
+<section class="category" id="nino" data-theme="nino">
+  <div class="category-inner">
+    <div class="category-head">
+      <div>
+        <h2>Niño</h2>
+        <p>Prácticos y resistentes, listos para el colegio y la aventura.</p>
+      </div>
+      <span class="category-count" data-count="nino"></span>
+    </div>
+    <div class="grid" data-grid="nino"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand" id="footerBrand">Catalogo</div>
+        <p class="footer-note">Bolsos seleccionados para toda la familia. Escríbenos por WhatsApp para conocer disponibilidad, medidas y tiempos de entrega.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#hombre">Hombre</a>
+        <a href="#mujer">Mujer</a>
+        <a href="#nina">Niña</a>
+        <a href="#nino">Niño</a>
+        <a href="#" id="footerWaBtn" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> — catálogo actualizado por el vendedor.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Product modal -->
+<div class="overlay" id="productOverlay">
+  <div class="modal" id="productModal"></div>
+</div>
+
+<div class="protect-toast" id="protectToast">Esta acción no está disponible.</div>
+
+<!-- ====================================================================
+     EDITA TUS BOLSOS AQUÍ ABAJO
+     ====================================================================
+     Cada bolso es un bloque <div class="producto-dato"> ... </div>.
+     Para agregar uno nuevo: copia un bloque completo, pégalo antes de
+     </div> (el que cierra "catalogoDatos"), y cambia los valores.
+     Para eliminar uno: borra su bloque completo.
+     Para marcarlo agotado: cambia data-disponible="true" por "false".
+
+     - data-id            → algo corto y único, sin espacios (ej: p9)
+     - data-categoria     → exactamente: hombre, mujer, nina o nino
+     - data-precio        → solo números, sin puntos ni "$"
+     - data-disponible    → true (disponible) o false (agotado)
+     - <h3>                → el nombre del bolso
+     - <p>                 → la descripción
+     - <img src="...">     → la ruta de la foto (primero súbela a la
+                             carpeta imagenes/, luego escribe aquí
+                             "imagenes/" + el nombre exacto del archivo)
+     ==================================================================== -->
+<div id="catalogoDatos">
+
+  <div class="producto-dato" data-id="p1" data-categoria="mujer" data-precio="55000" data-disponible="true">
+    <h3>NB-8065</h3>
+    <p>Manos libres</p>
+    <img src="img/p1.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p2" data-categoria="nina" data-precio="20000" data-disponible="true">
+    <h3>NB-8061</h3>
+    <p>Manos libres pequeño</p>
+    <img src="img/3.jpeg" alt="Manos libres pequeño">
+  </div>
+
+  <div class="producto-dato" data-id="p3" data-categoria="mujer" data-precio="60000" data-disponible="true">
+    <h3>NB-8007</h3>
+    <p>Manos libres</p>
+    <img src="img/4.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p4" data-categoria="nina" data-precio="20000" data-disponible="true">
+    <h3>NB-8060</h3>
+    <p>Manos libres pequeño</p>
+    <img src="img/5.jpeg" alt="Manos libres pequeño">
+  </div>
+
+  <div class="producto-dato" data-id="p5" data-categoria="mujer" data-precio="60000" data-disponible="true">
+    <h3>NB-8045</h3>
+    <p>Manos libres</p>
+    <img src="img/6.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p6" data-categoria="mujer" data-precio="65000" data-disponible="true">
+    <h3>NB-8041</h3>
+    <p>Manos libres</p>
+    <img src="img/7.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p7" data-categoria="mujer" data-precio="45000" data-disponible="true">
+    <h3>NB-8013</h3>
+    <p>Manos libres</p>
+    <img src="img/8.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p8" data-categoria="mujer" data-precio="35000" data-disponible="true">
+    <h3>NB-8015</h3>
+    <p>Manos libres</p>
+    <img src="img/9.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p9" data-categoria="mujer" data-precio="45000" data-disponible="true">
+    <h3>NB-8016</h3>
+    <p>Manos libres</p>
+    <img src="img/10.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p10" data-categoria="mujer" data-precio="45000" data-disponible="true">
+    <h3>NB-8017</h3>
+    <p>Manos libres</p>
+    <img src="img/11.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p11" data-categoria="mujer" data-precio="60000" data-disponible="true">
+    <h3>NB-8046</h3>
+    <p>Manos libres</p>
+    <img src="img/12.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p12" data-categoria="mujer" data-precio="60000" data-disponible="true">
+    <h3>NB-8047</h3>
+    <p>Manos libres</p>
+    <img src="img/13.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p13" data-categoria="mujer" data-precio="60000" data-disponible="true">
+    <h3>NB-8052</h3>
+    <p>Manos libres</p>
+    <img src="img/14.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p14" data-categoria="mujer" data-precio="50000" data-disponible="true">
+    <h3>NB-8053</h3>
+    <p>Manos libres</p>
+    <img src="img/15.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p15" data-categoria="mujer" data-precio="60000" data-disponible="true">
+    <h3>NB-8062</h3>
+    <p>Manos libres</p>
+    <img src="img/16.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p16" data-categoria="mujer" data-precio="70000" data-disponible="true">
+    <h3>NB-6013</h3>
+    <p>Manos libres</p>
+    <img src="img/17.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p17" data-categoria="mujer" data-precio="55000" data-disponible="true">
+    <h3>NB-6044</h3>
+    <p>Morral</p>
+    <img src="img/18.jpeg" alt="Morral">
+  </div>
+
+  <div class="producto-dato" data-id="p18" data-categoria="nina" data-precio="20000" data-disponible="true">
+    <h3>NB-5033</h3>
+    <p>Manos libres silicona</p>
+    <img src="img/19.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p19" data-categoria="nina" data-precio="20000" data-disponible="true">
+    <h3>NB-5034</h3>
+    <p>Manos libres silicona</p>
+    <img src="img/20.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p20" data-categoria="nina" data-precio="8000" data-disponible="true">
+    <h3>NB-5035</h3>
+    <p>Llavero-monedero</p>
+    <img src="img/21.jpeg" alt="Llavero-monedero">
+  </div>
+
+  <div class="producto-dato" data-id="p21" data-categoria="mujer" data-precio="45000" data-disponible="true">
+    <h3>NB-7054</h3>
+    <p>Manos libres</p>
+    <img src="img/22.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p22" data-categoria="mujer" data-precio="46000" data-disponible="true">
+    <h3>NB-7064</h3>
+    <p>Manos libres</p>
+    <img src="img/23.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p23" data-categoria="mujer" data-precio="48000" data-disponible="true">
+    <h3>NB-7063</h3>
+    <p>Manos libres</p>
+    <img src="img/24.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p24" data-categoria="mujer" data-precio="48000" data-disponible="true">
+    <h3>NB-7055</h3>
+    <p>Manos libres</p>
+    <img src="img/25.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p25" data-categoria="mujer" data-precio="55000" data-disponible="true">
+    <h3>NB-7047</h3>
+    <p>Manos libres</p>
+    <img src="img/26.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p26" data-categoria="nino" data-precio="12000" data-disponible="true">
+    <h3>NB-7041</h3>
+    <p>Llavero-monedero</p>
+    <img src="img/27.jpeg" alt="Llavero-monedero">
+  </div>
+
+  <div class="producto-dato" data-id="p27" data-categoria="mujer" data-precio="55000" data-disponible="true">
+    <h3>NB-7027</h3>
+    <p>Manos libres</p>
+    <img src="img/28.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p28" data-categoria="mujer" data-precio="46000" data-disponible="true">
+    <h3>NB-7021</h3>
+    <p>Bolso de manos</p>
+    <img src="img/29.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p29" data-categoria="mujer" data-precio="60000" data-disponible="true">
+    <h3>NB-6018</h3>
+    <p>Bolso de manos</p>
+    <img src="img/30.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p30" data-categoria="mujer" data-precio="48000" data-disponible="true">
+    <h3>NB-7024</h3>
+    <p>Bolso de manos</p>
+    <img src="img/31.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p31" data-categoria="mujer" data-precio="55000" data-disponible="true">
+    <h3>NB-7029</h3>
+    <p>Manos libres</p>
+    <img src="img/32.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p32" data-categoria="hombre" data-precio="55000" data-disponible="true">
+    <h3>NB-8021</h3>
+    <p>Morral</p>
+    <img src="img/33.jpeg" alt="Morral">
+  </div>
+
+  <div class="producto-dato" data-id="p33" data-categoria="mujer" data-precio="46000" data-disponible="true">
+    <h3>NB-8034</h3>
+    <p>Manos libres</p>
+    <img src="img/34.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p34" data-categoria="mujer" data-precio="48000" data-disponible="true">
+    <h3>NB-8033</h3>
+    <p>Manos libres</p>
+    <img src="img/35.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p35" data-categoria="mujer" data-precio="43000" data-disponible="true">
+    <h3>NB-8019</h3>
+    <p>Manos libres</p>
+    <img src="img/36.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p36" data-categoria="mujer" data-precio="45000" data-disponible="true">
+    <h3>NB-8012</h3>
+    <p>Manos libres</p>
+    <img src="img/37.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p37" data-categoria="mujer" data-precio="58000" data-disponible="true">
+    <h3>NB-8005</h3>
+    <p>Manos libres</p>
+    <img src="img/38.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p38" data-categoria="mujer" data-precio="54000" data-disponible="true">
+    <h3>NB-8004</h3>
+    <p>Manos libres</p>
+    <img src="img/39.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p39" data-categoria="mujer" data-precio="54000" data-disponible="true">
+    <h3>NB-8003</h3>
+    <p>Bolso de manos</p>
+    <img src="img/40.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p40" data-categoria="mujer" data-precio="58000" data-disponible="true">
+    <h3>NB-8002</h3>
+    <p>Bolso de manos</p>
+    <img src="img/41.jpeg" alt="Bolso de manos ">
+  </div>
+
+  <div class="producto-dato" data-id="p41" data-categoria="mujer" data-precio="58000" data-disponible="true">
+    <h3>NB-8001</h3>
+    <p>Bolso de manos</p>
+    <img src="img/42.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p42" data-categoria="mujer" data-precio="45000" data-disponible="true">
+    <h3>NB-9003</h3>
+    <p>Manos libres</p>
+    <img src="img/43.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p43" data-categoria="mujer" data-precio="46000" data-disponible="true">
+    <h3>NB-9004</h3>
+    <p>Manos libres</p>
+    <img src="img/44.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p44" data-categoria="mujer" data-precio="38000" data-disponible="true">
+    <h3>NB-9006</h3>
+    <p>Manos libres</p>
+    <img src="img/45.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p45" data-categoria="mujer" data-precio="35000" data-disponible="true">
+    <h3>NB-9007</h3>
+    <p>Manos libres</p>
+    <img src="img/46.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p46" data-categoria="hombre" data-precio="30000" data-disponible="true">
+    <h3>NB-9009</h3>
+    <p>Manos libres</p>
+    <img src="img/47.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p47" data-categoria="mujer" data-precio="38000" data-disponible="true">
+    <h3>NB-9008</h3>
+    <p>Manos libres</p>
+    <img src="img/48.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p48" data-categoria="hombre" data-precio="30000" data-disponible="true">
+    <h3>NB-9010</h3>
+    <p>Manos libres</p>
+    <img src="img/49.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p49" data-categoria="mujer" data-precio="55000" data-disponible="true">
+    <h3>NB-9012</h3>
+    <p>Morral</p>
+    <img src="img/50.jpeg" alt="Morral">
+  </div>
+
+  <div class="producto-dato" data-id="p50" data-categoria="hombre" data-precio="55000" data-disponible="true">
+    <h3>NB-9013</h3>
+    <p>Morral</p>
+    <img src="img/51.jpeg" alt="Morral">
+  </div>
+
+  <div class="producto-dato" data-id="p451" data-categoria="mujer" data-precio="46000" data-disponible="true">
+    <h3>NB-9015</h3>
+    <p>Manos libres</p>
+    <img src="img/52.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p452" data-categoria="hombre" data-precio="55000" data-disponible="true">
+    <h3>NB-9014</h3>
+    <p>Morral</p>
+    <img src="img/53.jpeg" alt="Morral">
+  </div>
+
+  <div class="producto-dato" data-id="p453" data-categoria="mujer" data-precio="48000" data-disponible="true">
+    <h3>NB-9018</h3>
+    <p>Manos libres</p>
+    <img src="img/54.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p454" data-categoria="mujer" data-precio="48000" data-disponible="true">
+    <h3>NB-9016</h3>
+    <p>Manos libres</p>
+    <img src="img/55.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p55" data-categoria="mujer" data-precio="55000" data-disponible="true">
+    <h3>NB-9017</h3>
+    <p>Manos libres</p>
+    <img src="img/56.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p456" data-categoria="mujer" data-precio="55000" data-disponible="true">
+    <h3>NB-9019</h3>
+    <p>Manos libres</p>
+    <img src="img/57.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p457" data-categoria="mujer" data-precio="48000" data-disponible="true">
+    <h3>NB-9020</h3>
+    <p>Manos libres</p>
+    <img src="img/58.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p458" data-categoria="mujer" data-precio="55000" data-disponible="true">
+    <h3>NB-9022</h3>
+    <p>Bolso de manos</p>
+    <img src="img/59.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p459" data-categoria="mujer" data-precio="25000" data-disponible="true">
+    <h3>NB-9024</h3>
+    <p>Bolso de manos</p>
+    <img src="img/60.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p60" data-categoria="mujer" data-precio="25000" data-disponible="true">
+    <h3>NB-9029</h3>
+    <p>Bolso de manos</p>
+    <img src="img/61.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p61" data-categoria="mujer" data-precio="20000" data-disponible="true">
+    <h3>NB-9026</h3>
+    <p>Bolso de manos</p>
+    <img src="img/62.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p62" data-categoria="mujer" data-precio="46000" data-disponible="true">
+    <h3>NB-9025</h3>
+    <p>Bolso de manos</p>
+    <img src="img/63.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p63" data-categoria="mujer" data-precio="46000" data-disponible="true">
+    <h3>NB-9031</h3>
+    <p>Manos libres</p>
+    <img src="img/64.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p64" data-categoria="mujer" data-precio="70000" data-disponible="true">
+    <h3>NB-9032</h3>
+    <p>Morral</p>
+    <img src="img/65.jpeg" alt="Morral">
+  </div>
+
+  <div class="producto-dato" data-id="p65" data-categoria="mujer" data-precio="27000" data-disponible="true">
+    <h3>NB-9033</h3>
+    <p>Manos libres</p>
+    <img src="img/66.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p66" data-categoria="nina" data-precio="20000" data-disponible="true">
+    <h3>NB-9036</h3>
+    <p>Manos libres pequeño</p>
+    <img src="img/67.jpeg" alt="Manos libres pequeño">
+  </div>
+
+  <div class="producto-dato" data-id="p67" data-categoria="mujer" data-precio="25000" data-disponible="true">
+    <h3>NB-9038</h3>
+    <p>Monedero</p>
+    <img src="img/68.jpeg" alt="Monedero">
+  </div>
+
+  <div class="producto-dato" data-id="p38" data-categoria="mujer" data-precio="48000" data-disponible="true">
+    <h3>NB-9037</h3>
+    <p>Manos libres</p>
+    <img src="img/69.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p69" data-categoria="mujer" data-precio="20000" data-disponible="true">
+    <h3>NB-3039</h3>
+    <p>Bolso de manos</p>
+    <img src="img/70.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p70" data-categoria="mujer" data-precio="30000" data-disponible="true">
+    <h3>NB-9042</h3>
+    <p>Manos libres</p>
+    <img src="img/71.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p71" data-categoria="mujer" data-precio="48000" data-disponible="true">
+    <h3>NB-9043</h3>
+    <p>Bolso de manos</p>
+    <img src="img/72.jpeg" alt="Bolso de manos">
+  </div>
+
+  <div class="producto-dato" data-id="p72" data-categoria="mujer" data-precio="70000" data-disponible="true">
+    <h3>NB-9045</h3>
+    <p>Morral</p>
+    <img src="img/73.jpeg" alt="Morral">
+  </div>
+
+  <div class="producto-dato" data-id="p73" data-categoria="mujer" data-precio="36000" data-disponible="true">
+    <h3>NB-9005</h3>
+    <p>Manos libres</p>
+    <img src="img/74.jpeg" alt="Manos libres">
+  </div>
+
+  <div class="producto-dato" data-id="p73" data-categoria="mujer" data-precio="55000" data-disponible="true">
+    <h3>NB-8038</h3>
+    <p>Manos libres</p>
+    <img src="img/mujer.jpeg" alt="Manos libres">
+  </div>
+
+  
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
